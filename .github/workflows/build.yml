@@ -14,6 +14,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+  with:
+    node-version: 16
     - name: Build windows-i386
       run: |
         git submodule init && git submodule update
@@ -25,6 +27,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+  with:
+    node-version: 16
     - name: Build dedicated windows-i386
       run: |
         git submodule init && git submodule update
@@ -36,6 +40,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+  with:
+    node-version: 16
     - name: Build dedicated linux-amd64
       run: |
         scripts/build-ubuntu-amd64.sh -d
